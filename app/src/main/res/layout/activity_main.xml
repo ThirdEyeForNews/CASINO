@@ -1,0 +1,68 @@
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ammu.casino.MainActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <RelativeLayout  android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout  android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            tools:ignore="UselessParent"
+            android:orientation="vertical">
+
+        </RelativeLayout >
+
+        <Button
+            android:id="@+id/singlePlay"
+            style="?metaButtonBarButtonStyle"
+            android:layout_width="750dp"
+            android:layout_height="180dp"
+            android:layout_below="@+id/fullscreen_content_controls"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="132dp" />
+
+        <Button
+            android:id="@+id/multiPlay"
+            style="?metaButtonBarButtonStyle"
+            android:layout_width="750dp"
+            android:layout_height="180dp"
+            android:layout_below="@+id/singlePlay"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:id="@+id/myProfile"
+            style="?metaButtonBarButtonStyle"
+            android:layout_width="750dp"
+            android:layout_height="180dp"
+            android:layout_below="@+id/multiPlay"
+            android:layout_alignStart="@+id/multiPlay" />
+
+        <Button
+            android:id="@+id/quit"
+            style="?metaButtonBarButtonStyle"
+            android:layout_width="750dp"
+            android:layout_height="180dp"
+            android:layout_below="@+id/myProfile"
+            android:layout_alignStart="@+id/myProfile" />
+
+
+    </RelativeLayout >
+
+</RelativeLayout >
